@@ -20,7 +20,7 @@ def get_c1(b2, args):
     necessary in FirmsMC.get_w().
     '''
     # Put code here.
-
+    
     return c1
 
 
@@ -34,6 +34,8 @@ def get_c2(b2, args):
     arguments are necessary in FirmsMC.get_r() and FirmsMC.get_w().
     '''
     # Put code here.
+    nvec, alpha, A, delta = args
+    c2 = (1+ FirmsMC.get_r(b2, (nvec, alpha, A)))*b2 + FirmMC.get_w(b2, (nvec, alpha, A, delta))*nvec[1]
 
     return c2
 
